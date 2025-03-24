@@ -24,6 +24,6 @@ public static void main(String[] args) {
 	double saldo = scanner.nextDouble();
 	
 	
-	System.out.println("Olá, " + nome + ", obrigado por criar uma conta em nosso banco; sua agência é " + agencia + ", o número da sua conta: " + numeroConta + " e seu saldo de " + saldo + " já está disponível para saque!");
+	System.out.println("Olá, " + nome + ", obrigado por criar uma conta em nosso banco; sua agência é " + agencia + ", o número da sua conta: " + numeroConta + " e seu saldo de R$" + saldo + " já está disponível para saque!");
 }
 }
