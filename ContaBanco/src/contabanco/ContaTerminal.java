@@ -17,13 +17,13 @@ public static void main(String[] args) {
 	System.out.println("Digite o número da agência");
 	String agencia = scanner.nextLine();
 	
-	System.out.println("Digite o número da conta: ");
+	System.out.println("Pra quantas pessoas voce esta devendo: ");
 	int numeroConta = scanner.nextInt();
 	
 	System.out.println("Digite o saldo da conta: ");
 	double saldo = scanner.nextDouble();
 	
 	
-	System.out.println("Olá, " + nome + ", obrigado por criar uma conta em nosso banco; sua agência é " + agencia + ", o número da sua conta: " + numeroConta + " e seu saldo de R$" + saldo + " já está disponível para saque!");
+	System.out.println("Olá, " + nome + " sua agência é " + agencia + ", o número da sua conta: " + numeroConta + " e seu saldo de R$" + saldo + " já está disponível para saque!");
 }
 }
