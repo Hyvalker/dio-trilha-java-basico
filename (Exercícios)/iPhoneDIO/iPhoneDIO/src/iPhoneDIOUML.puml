@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface MusicPlayer{
++ playMusic()
++ pauseMusic()
++ stopMusic()
++ nextSong()
++ previousSong()
+}
+
+interface WebBrowser{
++ openBrowser()
++ searchEngine()
++ browseWeb()
++ closeBrowser()
+}
+interface Phone {
++ makeCall()
++ receiveCall()
++ sendSMS()
++ receiveSMS()
++ endCall()
++ holdCall()
++ loudSpeaker()
+}
+
+class Smartphone {
+    -state: DeviceState
+
+}
+
+enum StateType {
+  PLAYING
+  PAUSED
+  STOPPED
+  RECEIVING_CALL
+  SURFING_WEB
+}
+
+class DeviceState << (R,orchid) Record >> {
+  - currentState: StateType
+}
+
+DeviceState --> StateType : uses
+
+Smartphone ..|> WebBrowser
+Smartphone ..|> MusicPlayer
+Smartphone ..|> Phone
+Smartphone "1"*--"1" DeviceState
+
+note right of DeviceState
+DeviceState representa os estados
+ativos das funções do dispositivo
+end note
+
+@enduml
